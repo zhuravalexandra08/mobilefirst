@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <input type="checkbox" class="menu__toggler" checked>
+        <div class="menu__container">
+            <img class="menu__logo" src="img/logo.svg">
+            <button class="menu__burger-button">
+                <div class="menu__center-line">
+
+                </div>
+            </button>
+        </div>
+        <div class="menu__items">
+            <a href="" class="menu__link">Доставка</a>
+            <a href="" class="menu__link">Наша фишка</a>
+            <a href="" class="menu__link">Топ растений</a>
+            <a href="" class="menu__link">Карта</a>
+            <a href="" class="menu__link">Заказ звонка</a>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header__title">
+            <h1>Твой <span class="header__title_green">зеленый</span> <span class="header__title_blue">комнатный</span> друг</h1>
+        </div>
+        <div class="header__image">
+            <picture>
+                <source srcset="img/header-mobile-p.png" media="(max-width:375px)">
+                <source srcset="img/header-mobile-l.png" media="(max-width:607px)">
+                <source srcset="img/header-tablet-p.png" media="(max-width:768px)">
+                <source srcset="img/header-tablet-l.png" media="(max-width:1024px)">
+                <source srcset="img/header-desktop.png" media="(max-width:1440px)">
+                <img src="img/header-desktop.png">
+            </picture>
+        </div>
+        
+    </header>
+    <main>
+        <section class="delivery">
+           <section class="delivery__header">
+            <img class="delivery__image" src="img/section2-logo.svg">
+            <h2 class="delivery__title">Комнатные растения с доставкой</h2>
+           </section>
+           <p class="delivery__description">Заказывай у нас комнатные растения. Доставка бесплатно. А еще мы будем раз в месяц привозить тебе необходимые вещи, чтобы растение цвело и доставляло тебе радость</p>
+        </section>
+        <section class="feature">
+            <section class="feature__header">
+                <img class="feature__image" src="img/section3-logo.svg">
+                <h2 class="feature__title">Селекция будущего</h2>
+            </section>
+            <p class="feature__description">Наши растения выведены с использованием современной генной инженерии и последних достижений садоводства. Они неприхотливы, но при этом выделяют в 100 раз больше кислорода чем обычные растения</p>
+        </section>
+        <section class="bestsellers">
+            <h2 class="bestsellers__title">Топ наших растений</h2>
+            <div class="bestsellers__cards">
+                <div class="bestsellers__item">
+                    <img class="bestsellers__image" src="img/bestsellers1.png">
+                    <h2 class="bestsellers__name">Растение 1</h2>
+                </div>
+                <div class="bestsellers__item">
+                    <img class="bestsellers__image" src="img/bestsellers2.png">
+                    <h2 class="bestsellers__name">Растение 2</h2>
+                </div>
+                <div class="bestsellers__item">
+                    <img class="bestsellers__image" src="img/bestsellers3.png">
+                    <h2 class="bestsellers__name">Растение 3</h2>
+                </div>
+                <div class="bestsellers__item">
+                    <img class="bestsellers__image" src="img/bestsellers4.png">
+                    <h2 class="bestsellers__name">Растение 4</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</html>

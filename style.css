@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+html {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.menu {
+    width: 100%;
+    height: 60px;
+    background-color: #203D37;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #203D37;
+}
+
+.menu__burger-button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.menu__center-line {
+    width: 100%;
+    height: 6px;
+    background-color: white;
+    scale: 0;
+}
+
+.menu__burger-button::before, .menu__burger-button::after {
+    content: "";
+    width: 100%;
+    height: 6px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: 0.4s;
+}
+
+.menu__container .menu__burger-button::before {
+    transform: rotate(45deg);
+    top: 30%;
+}
+
+.menu__container .menu__burger-button::after {
+    transform: rotate(-45deg);
+    top: 30%;
+}
+
+.menu__items {
+    width: 100%;
+    background-color: #203d37e6;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 58px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.menu__link {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    padding-top: 24px;
+}
+
+.menu__toggler {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0;
+}
+
+.menu__toggler:checked ~ .menu__items {
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__toggler:checked ~ .menu__container button::after {
+   top: 0;
+   transform: rotate(0);
+}
+
+.menu__toggler:checked ~ .menu__container button::before {
+    bottom: 0;
+    top: auto;
+    transform: rotate(0);
+}
+
+.menu__toggler:checked ~ .menu__container .menu__center-line {
+    scale: 1;
+}
+
+.header {
+    margin-top: 60px;
+    position: relative;
+    
+}
+
+.header__title {
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    color: white;
+}
+
+.header__title_green {
+    color: #21683E;
+}
+
+.header__title_blue {
+    color: #296274;
+}
+
+.feature, .delivery {
+    padding: 33px 15px 19px;
+}
+
+.delivery__header, .feature__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.delivery__title, .feature__title {
+    text-align: right;
+
+}
+
+.delivery__description, .feature__description {
+    font-weight: 300;
+}
+
+.bestsellers {
+    padding: 55px 19px 74px 15px;
+}
+
+.bestsellers__title {
+    margin-bottom: 62px;
+}
+
+.bestsellers__item {
+    border: solid;
+    position: relative;
+}
+
+.bestsellers__image {
+    /* position: relative;
+    z-index: 5;
+    left: 112px;
+    bottom: 56px; */
+    display: block;
+    margin-left: auto;
+    margin-bottom: 56px;
+    margin-right: 17px;
+}
+
+.bestsellers__name {
+    color: white;
+    background-color: #51BF4F;
+    height: 112px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 12px 22px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+}
+
+.bestsellers__item:nth-of-type(2n) .bestsellers__name{
+    background-color: #3DA077;
+}
+
+
+/* Адаптировать уже сделанные разделы под бОльшие экраны с помощью медиа-запросов (min-width) */
+
